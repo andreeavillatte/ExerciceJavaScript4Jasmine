@@ -56,20 +56,24 @@ var InverseString = function (texte) {
  * Exercices sur les nombres et les caluls mathématiques
  */
 var calculPuissance = function (x, y) {
-    return 'A completer';
+    return x ** y;
 }
 var valeurAbsolue = function (nombre) {
-    return 'A completer';
+    return Math.abs(nombre);
 }
 var valeurAbsolueArray = function (array) {
-    return 'A completer';
+    return forEach.Math.abs(array);
 }
+///// Je ne sais pas le faire sans la boucle for
 var sufaceCercle = function (rayon) {
-    return 'A completer';
+    return Math.round (Math.PI*(rayon ** 2));
 }
+// pi*r**2
 var hypothenuse = function (ab, ac) {
-    return 'A completer';
+    return Math.sqrt(ab ** 2 + ac ** 2  );
 }
+// l'hypothenuse a carre est egal avec la somme des catettes carrées 
 var calculIMC = function (poids, taille) {
-    return 'A completer';
+    return (Math.round(((poids / (taille ** 2)))*100))/100;
 }
+// Ppour arrondir à 2 chiffres après la virgule : il suffit de multiplier le nombre par 100, de calculer l'arrondi, et de le diviser par 100 pour remettre la virgule à sa place originale

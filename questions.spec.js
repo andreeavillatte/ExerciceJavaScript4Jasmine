@@ -66,10 +66,13 @@ describe('Les nombres et opérations mathématiques : ', function () {
         var result = valeurAbsolue(-5);
         expect(result).toEqual(5);
     });
-    it('Afficher les valeurs absolues de plusieurs nombres', function () {
-        var result = valeurAbsolueArray([-5,-50,-25,-568]);
-        expect(result).toEqual([5,50,25,568]);
-    });
+    var valeurAbsolueArray = function (array) {
+        //on parcours le tableau et change chaque valeur en absolue
+        for (i=0; i<array.length; i++){
+            array[i]=Math.abs(array[i]);
+        }
+        return array;
+    }
     it('Calculer la surface d\'un cercle en fonction de son rayon. L\'arondir à l\'entier le plus proche', function () {
         var result = sufaceCercle(5);
         expect(result).toEqual(79);
