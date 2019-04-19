@@ -16,8 +16,8 @@ var concatString = function (texte1, texte2) {
     // concatenation toute simple
 }
 var afficherCar5 = function (texte) {
-    return texte.slice(4, 5);
-    // ce n'est pas str.charAt(4); mais c'est couper le character de la position 5 a 6, et parce que en js la numerotation commence de 0 il faut compter 4 pour avoir le 5
+    return texte.charAt(4);
+    // la numerotation commence de 0 il faut compter 4 pour avoir le 5
 }
 var afficher9Car = function (texte) {
     return texte.slice(0, 9);
@@ -40,7 +40,10 @@ var IsString = function (texte) {
     // if it's not a number, it's a string
 }
 var AfficherExtensionString = function (texte) {
-    return texte.slice(-3);
+//     return texte.slice(-3);
+// return texte.slice (-3) functionne aussi
+    var ext = texte.split('.').pop()
+    return ext
     // on montre les dernieres quatre de string: .jpg
 }
 var NombreEspaceString = function (texte) {
@@ -56,13 +59,16 @@ var InverseString = function (texte) {
  * Exercices sur les nombres et les caluls mathématiques
  */
 var calculPuissance = function (x, y) {
-    return x ** y;
+     return Math.pow(x,y);
+     // power
 }
 var valeurAbsolue = function (nombre) {
     return Math.abs(nombre);
 }
 var valeurAbsolueArray = function (array) {
-    return forEach.Math.abs(array);
+//   return forEach.Math.abs(array);
+//   return Array.from(array, x =>Math.abs); // e bun si asta insa e prea complicat
+     return array.map(Math.abs);
 }
 ///// Je ne sais pas le faire sans la boucle for
 var sufaceCercle = function (rayon) {
@@ -75,5 +81,6 @@ var hypothenuse = function (ab, ac) {
 // l'hypothenuse a carre est egal avec la somme des catettes carrées 
 var calculIMC = function (poids, taille) {
     return (Math.round(((poids / (taille ** 2)))*100))/100;
+//     return (Math.round(poids / (taille * taille)).toFixed(2));
 }
-// Ppour arrondir à 2 chiffres après la virgule : il suffit de multiplier le nombre par 100, de calculer l'arrondi, et de le diviser par 100 pour remettre la virgule à sa place originale
+// Pour arrondir à 2 chiffres après la virgule : il suffit de multiplier le nombre par 100, de calculer l'arrondi, et de le diviser par 100 pour remettre la virgule à sa place originale
